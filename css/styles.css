@@ -341,4 +341,9 @@ template {
 [hidden] {
   display: none;
 }
+
+/*Backgrounf Styles*/
+body {
+  background-color: lightgray;
+}
 /*# sourceMappingURL=styles.css.map */

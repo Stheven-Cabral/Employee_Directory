@@ -5,12 +5,12 @@ const employeeSection = document.querySelector('.employees');
 async function getStartupDirectory(url) {
     const directoryResponse = await fetch(url);
     const directoryJSON = await directoryResponse.json();
-    console.log(directoryJSON);
-    return directoryJSON;
+    console.log(directoryJSON.results);
+    return directoryJSON.results;
 }
 
 function createHTML(data) {
-    data.prototype.map(employee => {
+    data.map(employee => {
         const newDiv = document.createElement('div');
         employeeSection.appendChild(newDiv);
         newDiv.innerHTML =`

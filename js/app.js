@@ -1,25 +1,27 @@
 const randUserUrl = 'https://randomuser.me/api/?results=12';
+const employeeSection = document.querySelector('.employees');
 
 /*Code for Requesting Random User Data*/
 async function getStartupDirectory(url) {
     const directoryResponse = await fetch(url);
     const directoryJSON = await directoryResponse.json();
-
     console.log(directoryJSON);
+    return directoryJSON;
 }
 
 function createHTML(data) {
-    const employeeSection = document.querySelector('.employees');
-    const newDiv = document.createElement('div');
-    employeeSection.appendChild(newDiv);
-    newDiv.innerHTML =`
-    <p>${data.gender}</p>
-    `;
+    data.prototype.map(employee => {
+        const newDiv = document.createElement('div');
+        employeeSection.appendChild(newDiv);
+        newDiv.innerHTML =`
+        <p>${employee.gender}</p>
+        `;
+    });
 }
 
-getStartupDirectory(randUserUrl);
-//     .then(createHTML)
-// ;
+getStartupDirectory(randUserUrl)
+    .then(createHTML)
+;
 
 // // /*Example code to go off by*/
 // const astrosUrl = 'http://api.open-notify.org/astros.json';
@@ -31,7 +33,7 @@ getStartupDirectory(randUserUrl);
 // async function getPeopleInSpace(url) {
 //   const peopleResponse = await fetch(url);
 //   const peopleJSON = await peopleResponse.json();
-
+//   console.log(peopleJSON);
 //   const profiles = peopleJSON.people.map( async (person) => {
 //     const craft = person.craft;
 //     const profileResponse = await fetch(wikiUrl + person.name);
@@ -42,6 +44,8 @@ getStartupDirectory(randUserUrl);
 
 //   return Promise.all(profiles);
 // }
+
+// getPeopleInSpace(astrosUrl);
 
 // // Generate the markup for each profile
 // function generateHTML(data) {

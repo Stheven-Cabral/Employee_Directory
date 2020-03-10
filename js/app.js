@@ -14,7 +14,10 @@ function createHTML(data) {
         const newDiv = document.createElement('div');
         employeeSection.appendChild(newDiv);
         newDiv.innerHTML =`
-        <p>${employee.gender}</p>
+        <img src=${employee.picture.medium}>
+        <h2>${employee.name.first} ${employee.name.last}</h2>
+        <p>${employee.email}</p>
+        <p>${employee.location.state}</p>
         `;
     });
 }

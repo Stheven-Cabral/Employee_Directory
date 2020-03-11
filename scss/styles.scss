@@ -1,3 +1,13 @@
+/*Utilities Styles Import*/
+@import 'utilities/variables';
+
 /*Base Styles Import*/
 @import 'base/_normalize';
 @import 'base/layout';
+@import 'base/typography';
+
+/*Component Styles Import*/
+@import 'components/card';
+@import 'components/header';
+@import 'components/search';
+

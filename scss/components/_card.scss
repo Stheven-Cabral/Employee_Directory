@@ -1,0 +1,11 @@
+/*Employee card Styling*/
+.employees div {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $card-top-bottom-margin;
+    margin-bottom: $card-top-bottom-margin;
+    border: 2px solid darkgray;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}

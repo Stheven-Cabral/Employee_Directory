@@ -7,8 +7,17 @@
 .search input {
     width: 250px;
     height: 30px;
-    border: 1px solid darkgray;
+    border: 2px solid darkgray;
     border-radius: 4px;
+    transition: all 0.5s;
+}
+
+.search input:hover {
+    border-color: lightgreen;
+}
+
+.search input:focus {
+    border: 3px solid lightgreen;
 }
 
 /*Styling for the placeholder*/

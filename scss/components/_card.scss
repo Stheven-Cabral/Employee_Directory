@@ -1,5 +1,5 @@
 /*Employee card Styling*/
-.employees div {
+.employee-card {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -10,6 +10,46 @@
     background-color: whitesmoke;
 }
 
+.employee-card:hover {
+    box-shadow: 0px 0px 20px 2.5px lightgreen;
+}
+
 img {
-    border-radius: 60px;;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border-radius: 65px;
+}
+
+h2,
+p {
+    text-align: center;
+}
+
+/*Media Query Styles at 768px and above*/
+@media (min-width: 768px) {
+    .employee-card {
+        width: 350px;
+    }
+
+    img {
+        display: inline;
+        width: 95px;
+        margin: 17.5px 0px 15px 15px;
+    }
+
+    .employee-text {
+        float: right;
+        margin-right: 15px;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
 }

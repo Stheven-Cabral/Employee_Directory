@@ -352,6 +352,28 @@ body {
   background-color: #f0f0f0;
 }
 
+.modal {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+/*Media Query Styles at 768px and above*/
+@media (min-width: 768px) {
+  .employees {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 /*Font Styling*/
 body {
   font-family: 'Cabin', sans-serif;
@@ -359,19 +381,57 @@ body {
 
 /*Component Styles Import*/
 /*Employee card Styling*/
-.employees div {
+.employee-card {
   width: 300px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 2px solid darkgray;
   border-radius: 4px;
   background-color: whitesmoke;
 }
 
+.employee-card:hover {
+  -webkit-box-shadow: 0px 0px 20px 2.5px lightgreen;
+          box-shadow: 0px 0px 20px 2.5px lightgreen;
+}
+
 img {
-  border-radius: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  border-radius: 65px;
+}
+
+h2,
+p {
+  text-align: center;
+}
+
+/*Media Query Styles at 768px and above*/
+@media (min-width: 768px) {
+  .employee-card {
+    width: 350px;
+  }
+  img {
+    display: inline;
+    width: 95px;
+    margin: 17.5px 0px 15px 15px;
+  }
+  .employee-text {
+    float: right;
+    margin-right: 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
 }
 
 header h1 {
@@ -394,8 +454,18 @@ header h1 {
 .search input {
   width: 250px;
   height: 30px;
-  border: 1px solid darkgray;
+  border: 2px solid darkgray;
   border-radius: 4px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.search input:hover {
+  border-color: lightgreen;
+}
+
+.search input:focus {
+  border: 3px solid lightgreen;
 }
 
 /*Styling for the placeholder*/

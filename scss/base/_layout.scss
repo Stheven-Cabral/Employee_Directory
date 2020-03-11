@@ -2,3 +2,22 @@
 body {
     background-color: $bg-color;
 }
+
+.modal {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+/*Media Query Styles at 768px and above*/
+@media (min-width: 768px) {
+    .employees {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

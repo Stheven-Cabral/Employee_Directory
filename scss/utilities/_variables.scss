@@ -1,8 +1,15 @@
 /*Layout variables*/
 $bg-color: rgb(240, 240, 240);
 
-/*Header card variables*/
+/*Header variables*/
 $head-top-bottom-margin: 30px;
+
+/*Placeholder variables and mixins*/
+@mixin placeholder-style {
+    font-style: italic;
+    padding-left: 5px;
+    color: darkgrey;
+}
 
 /*Employee card variables*/
 $card-top-bottom-margin: 10px;

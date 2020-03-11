@@ -1,6 +1,7 @@
 /*Utilities Styles Import*/
 /*Layout variables*/
-/*Header card variables*/
+/*Header variables*/
+/*Placeholder variables and mixins*/
 /*Employee card variables*/
 /*Base Styles Import*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -377,11 +378,46 @@ header h1 {
 }
 
 .search {
-  background-color: blue;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .search input {
   width: 250px;
+  height: 30px;
+  border: 1px solid darkgray;
+  border-radius: 4px;
+}
+
+/*Styling for the placeholder*/
+::-webkit-input-placeholder {
+  /*Edge*/
+  font-style: italic;
+  padding-left: 5px;
+  color: darkgrey;
+}
+
+:-ms-input-placeholder {
+  /*Internet Explorer 10-11*/
+  font-style: italic;
+  padding-left: 5px;
+  color: darkgrey;
+}
+
+::-ms-input-placeholder {
+  font-style: italic;
+  padding-left: 5px;
+  color: darkgrey;
+}
+
+::placeholder {
+  font-style: italic;
+  padding-left: 5px;
+  color: darkgrey;
 }
 /*# sourceMappingURL=styles.css.map */

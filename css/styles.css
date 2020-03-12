@@ -505,6 +505,8 @@ header h1 {
 }
 
 .profile {
+  margin: auto;
+  margin-top: 10%;
   width: 300px;
   background-color: whitesmoke;
   border: 2px solid darkgray;
@@ -528,6 +530,7 @@ header h1 {
   width: 150px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
   border-radius: 75px;
 }
 /*# sourceMappingURL=styles.css.map */

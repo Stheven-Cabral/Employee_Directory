@@ -12,6 +12,7 @@ async function getStartupDirectory(url) {
     return directoryData;
 }
 
+/*Code for generating user cards and calling the generateModal function when a card is clicked*/
 function createHTML(data) {
     data.map(employee => {
         const newDiv = document.createElement('div');
@@ -37,6 +38,7 @@ function createHTML(data) {
     });   
 }
 
+/*Function for generating the modal*/
 function generateModal(data) {
     let birthDate = data.dob.date.substring(0, 10);
     console.log(birthDate);
@@ -60,5 +62,9 @@ function generateModal(data) {
         `; 
 }
 
+/*Code for adding a click event listener to the x icon and outside the modal profile that will close the modal window*/
+
+
+/*Code for fetching user data then calling the createHTML function*/
 getStartupDirectory(randUserUrl)
     .then(createHTML);

@@ -511,8 +511,15 @@ header h1 {
   border-radius: 4px;
 }
 
+.x {
+  margin: 0px;
+}
+
 .modal-img {
+  display: block;
   width: 150px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 75px;
 }
 /*# sourceMappingURL=styles.css.map */

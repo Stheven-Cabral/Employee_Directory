@@ -47,7 +47,7 @@ function generateModal(data) {
     newModal.innerHTML=`
         <div class="profile">
             <div class="imgX">
-                <img src="../images/employee_directory.png" class="x">
+                <img src="icons/x-mark.png" class="x">
             </div>
             <img src="${data.picture.large}" class="modal-img" alt="close">
             <h2>${data.name.first} ${data.name.last}</h2>

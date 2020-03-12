@@ -22,16 +22,16 @@ function createHTML(data) {
         </div>
         `;
     });
-    return data;
+    
+    const bodyOfPage = document.querySelector('body');
+    const employeeCard = document.querySelector('.employee-card');
+    employeeCard.addEventListener('click', () => {
+        const newModal = document.createElement('div');
+        bodyOfPage.appendChild(newModal);
+        newModal.classList.add('modal');
+        newModal.innerHTML=`Hello`;   
+    });
 }
 
 getStartupDirectory(randUserUrl)
     .then(createHTML);
-
-const bodyOfPage = document.querySelector('body');
-const employeeCard = document.querySelector('.employee-card');
-employeeCard.addEventListener('click', () => {
-    const newModal = document.createElement('div');
-    newModal.classList.add('.modal');
-    bodyOfPage.appendChild(newModal);
-});

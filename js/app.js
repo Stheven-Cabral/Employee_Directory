@@ -29,7 +29,19 @@ function createHTML(data) {
         const newModal = document.createElement('div');
         bodyOfPage.appendChild(newModal);
         newModal.classList.add('modal');
-        newModal.innerHTML=`Hello`;   
+        newModal.innerHTML=`
+        <div class="profile">
+            <div class="imgX">
+                <img src="">
+            </div>
+            <img>
+            <h3></h3>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        `;   
     });
 }
 

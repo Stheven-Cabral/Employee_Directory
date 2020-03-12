@@ -414,7 +414,7 @@ p {
     width: 350px;
   }
   img {
-    display: inline;
+    display: inline-block;
     width: 95px;
     margin: 17.5px 0px 15px 15px;
   }
@@ -509,5 +509,10 @@ header h1 {
   background-color: whitesmoke;
   border: 2px solid darkgray;
   border-radius: 4px;
+}
+
+.modal-img {
+  width: 150px;
+  border-radius: 75px;
 }
 /*# sourceMappingURL=styles.css.map */

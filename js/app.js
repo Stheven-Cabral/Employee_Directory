@@ -8,6 +8,7 @@ async function getStartupDirectory(url) {
     const directoryJSON = await directoryResponse.json();
     const directoryData = directoryJSON.results;
     employeeData.push(directoryData);
+    employeeData = employeeData[0];
     return directoryData;
 }
 
@@ -27,7 +28,6 @@ function createHTML(data) {
     });
 
     const allEmployeeCards = employeeSection.querySelectorAll('.employee-card');
-    console.log(allEmployeeCards);
 
     allEmployeeCards.forEach((card, index) => {
         card.addEventListener('click', (e) => {
@@ -38,6 +38,8 @@ function createHTML(data) {
 }
 
 function generateModal(data) {
+    let birthDate = data.dob.date.substring(0, 10);
+    console.log(birthDate);
     const bodyOfPage = document.querySelector('body');
     const newModal = document.createElement('div');
     bodyOfPage.appendChild(newModal);
@@ -47,12 +49,13 @@ function generateModal(data) {
             <div class="imgX">
                 <img src="">
             </div>
-            <img>
-            <h3></h3>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <img src="${data.picture.large}" class="modal-img">
+            <h3>${data.name.first} ${data.name.last}</h3>
+            <p>${data.email}</p>
+            <p>${data.phone}</p>
+            <p>${data.location.street.number} ${data.location.street.name}</p>
+            <p>${data.location.city}, ${data.location.state} ${data.location.postcode}</p>
+            <p>Birthday: ${birthDate}</p>
         </div>
         `; 
 }

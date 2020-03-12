@@ -495,7 +495,6 @@ header h1 {
 
 /*Modal Styling*/
 .modal {
-  display: none;
   position: fixed;
   left: 0;
   top: 0;

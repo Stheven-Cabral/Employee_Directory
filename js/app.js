@@ -1,11 +1,14 @@
 const randUserUrl = 'https://randomuser.me/api/?results=12&nat=US';
 const employeeSection = document.querySelector('.employees');
+let employeeData = [];
 
 /*Code for Requesting Random User Data*/
 async function getStartupDirectory(url) {
     const directoryResponse = await fetch(url);
     const directoryJSON = await directoryResponse.json();
-    return directoryJSON.results;
+    const directoryData = directoryJSON.results;
+    employeeData.push(directoryData);
+    return directoryData;
 }
 
 function createHTML(data) {
@@ -22,14 +25,24 @@ function createHTML(data) {
         </div>
         `;
     });
-    
+
+    const allEmployeeCards = employeeSection.querySelectorAll('.employee-card');
+    console.log(allEmployeeCards);
+
+    allEmployeeCards.forEach((card, index) => {
+        card.addEventListener('click', (e) => {
+            console.log(employeeData[index]);
+            generateModal(employeeData[index]);
+        });
+    });   
+}
+
+function generateModal(data) {
     const bodyOfPage = document.querySelector('body');
-    const employeeCard = document.querySelector('.employee-card');
-    employeeCard.addEventListener('click', () => {
-        const newModal = document.createElement('div');
-        bodyOfPage.appendChild(newModal);
-        newModal.classList.add('modal');
-        newModal.innerHTML=`
+    const newModal = document.createElement('div');
+    bodyOfPage.appendChild(newModal);
+    newModal.classList.add('modal');
+    newModal.innerHTML=`
         <div class="profile">
             <div class="imgX">
                 <img src="">
@@ -41,8 +54,7 @@ function createHTML(data) {
             <p></p>
             <p></p>
         </div>
-        `;   
-    });
+        `; 
 }
 
 getStartupDirectory(randUserUrl)

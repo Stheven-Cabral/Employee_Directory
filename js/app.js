@@ -13,7 +13,7 @@ async function getStartupDirectory(url) {
 }
 
 /*Code for generating user cards and calling the generateModal function when a card is clicked*/
-function createHTML(data) {
+function createEmployee(data) {
     data.map(employee => {
         const newDiv = document.createElement('div');
         newDiv.classList.add("employee-card");
@@ -29,13 +29,15 @@ function createHTML(data) {
     });
 
     const allEmployeeCards = employeeSection.querySelectorAll('.employee-card');
-
     allEmployeeCards.forEach((card, index) => {
         card.addEventListener('click', (e) => {
             console.log(employeeData[index]);
             generateModal(employeeData[index]);
         });
     });   
+
+    const modalContainer = document.querySelector('.modal');
+    // modalContainer.addEventListener('click', ) Stopped here
 }
 
 /*Function for generating the modal*/
@@ -67,4 +69,4 @@ function generateModal(data) {
 
 /*Code for fetching user data then calling the createHTML function*/
 getStartupDirectory(randUserUrl)
-    .then(createHTML);
+    .then(createEmployee);

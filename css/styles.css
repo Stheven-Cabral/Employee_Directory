@@ -432,6 +432,7 @@ p {
   }
 }
 
+/*Main header styling*/
 header h1 {
   text-align: center;
   font-size: 1.5rem;
@@ -439,6 +440,7 @@ header h1 {
   margin-bottom: 30px;
 }
 
+/*Styling for the Search Bar*/
 .search {
   margin-bottom: 40px;
   display: -webkit-box;

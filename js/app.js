@@ -9,7 +9,6 @@ async function getStartupDirectory(url) {
     const directoryData = directoryJSON.results;
     employeeData.push(directoryData);
     employeeData = employeeData[0];
-    console.log(employeeData);
     return directoryData;
 }
 
